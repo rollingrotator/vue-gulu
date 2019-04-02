@@ -29,12 +29,27 @@
     body {
       font-size: var(--font-size);
     }
+    .icon {
+      width: 1em; height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
 <div id="app">
-  <d-button></d-button>
+  <d-button>
+    加油啊,索隆
+  </d-button>
+  <d-button icon="setting">
+    加油啊,索隆
+  </d-button>
+  <d-button icon="setting" icon-position="right">
+    加油啊,索隆
+  </d-button>
 </div>
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1122771_vfostljb6zl.js"> </script>
 </body>
 </html>
