@@ -11,7 +11,18 @@
 
 <script>
   export default {
-    props: ['icon', 'iconPosition']
+    // props: ['icon', 'iconPosition']
+    props: {
+      'icon': {},
+      'iconPosition': {
+        type: String,
+        default: 'left',
+        //属性的检查器
+        validator(value) {
+          return !(value !== 'left' && value !== 'right');
+        }
+      }
+    }
   }
 </script>
 
@@ -38,6 +49,7 @@
     }
     > .icon {
       order: 1;
+      margin-right: .1em;
     }
     > .content {
       order: 2;
@@ -45,6 +57,8 @@
     &.icon-right {
       > .icon {
         order: 2;
+        margin-right: 0;
+        margin-left: .1em;
       }
       > .content {
         order: 1;
