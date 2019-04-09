@@ -34,13 +34,13 @@
 </head>
 <body>
 <div id="app">
-  <d-button :loading="true">
+  <d-button :loading="loading1" @click="loading1 = !loading1">
     加油啊,索隆
   </d-button>
-  <d-button icon="setting"  >
+  <d-button icon="setting"  :loading="loading2" @click="loading2 = !loading2">
     加油啊,索隆
   </d-button>
-  <d-button icon="setting" icon-position="right"  :loading="true">
+  <d-button icon="setting" icon-position="right"  :loading="loading3" @click="loading3 = !loading3">
     加油啊,索隆
   </d-button>
   <d-button icon="setting" icon-position="left">

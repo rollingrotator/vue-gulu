@@ -1,5 +1,6 @@
 <template>
-  <button class="d-button" :class="{[`icon-${iconPosition}`]: true}">
+  <button class="d-button" :class="{[`icon-${iconPosition}`]: true}"
+    @click="$emit('click')">
     <d-icon v-if="icon && !loading" :name="icon" class="icon"></d-icon>
     <d-icon name="loading" v-if="loading" class="loading icon"></d-icon>
     <div class="content">
