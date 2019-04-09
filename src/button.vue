@@ -1,6 +1,7 @@
 <template>
   <button class="d-button" :class="{[`icon-${iconPosition}`]: true}">
-    <d-icon v-if="icon" :name="icon"></d-icon>
+    <d-icon v-if="icon" :name="icon" class="icon"></d-icon>
+    <d-icon name="loading" class="loading"></d-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -62,6 +63,16 @@
         order: 1;
       }
     }
+    .loading{
+      animation: btn-spin 1s linear infinite;
+    }
   }
-
+  @keyframes btn-spin {
+    0%{
+      transform:rotate(0);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
 </style>
