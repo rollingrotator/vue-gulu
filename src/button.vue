@@ -1,7 +1,7 @@
 <template>
   <button class="d-button" :class="{[`icon-${iconPosition}`]: true}">
-    <d-icon v-if="icon" :name="icon" class="icon"></d-icon>
-    <d-icon name="loading" class="loading"></d-icon>
+    <d-icon v-if="icon && !loading" :name="icon" class="icon"></d-icon>
+    <d-icon name="loading" v-if="loading" class="loading icon"></d-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -13,6 +13,10 @@
     // props: ['icon', 'iconPosition']
     props: {
       'icon': {},
+      'loading':{
+        type:Boolean,
+        default:false
+      },
       'iconPosition': {
         type: String,
         default: 'left',
@@ -64,7 +68,7 @@
       }
     }
     .loading{
-      animation: btn-spin 1s linear infinite;
+      animation: btn-spin 1.8s linear infinite;
     }
   }
   @keyframes btn-spin {

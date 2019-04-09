@@ -6,3 +6,4 @@ Vue.component('d-icon',Icon)
 new Vue({
   el:'#app'
 });
+
