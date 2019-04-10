@@ -18,12 +18,27 @@ new Vue({
 
 import chai from 'chai'
 const  expect = chai.expect
-const Constructor = Vue.extend(Button)
-const button = new Constructor({
-  propsData:{
-    icon:'setting'
-  }
-})
-button.$mount('#test')
-const assert = button.$el.querySelector('use').getAttribute('xlink:href')
-expect(assert).to.eq('#icon-setting')
+{
+  const Constructor = Vue.extend(Button)
+  const button = new Constructor({
+    propsData:{
+      icon:'setting'
+    }
+  })
+  button.$mount()
+  let assert = button.$el.querySelector('use').getAttribute('xlink:href')
+  expect(assert).to.eq('#icon-setting')
+}
+{
+  const Constructor = Vue.extend(Button)
+  const button = new Constructor({
+    propsData:{
+      icon:'setting',
+      loading:true
+    }
+  })
+  button.$mount()
+  let assert = button.$el.querySelector('use').getAttribute('xlink:href')
+  expect(assert).to.eq('#icon-loading')
+}
+
