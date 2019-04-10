@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/rollingrotator/vue-gulu#readme",
   "dependencies": {
+    "chai-spies": "^1.0.0",
     "vue": "^2.6.9",
     "vue-hot-reload-api": "^2.3.3"
   },
