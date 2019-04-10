@@ -32,10 +32,11 @@
           <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="451">
-                  <caret line="97" column="2" selection-start-line="97" selection-start-column="2" selection-end-line="97" selection-end-column="2" />
+                <state relative-caret-position="469">
+                  <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
+                    <element signature="e#339#362#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -190,7 +191,7 @@
       <workItem from="1554215871988" duration="5549000" />
       <workItem from="1554390999925" duration="589000" />
       <workItem from="1554724286294" duration="7882000" />
-      <workItem from="1554898303061" duration="6574000" />
+      <workItem from="1554898303061" duration="7335000" />
     </task>
     <task id="LOCAL-00001" summary="npm install vue">
       <created>1537087460570</created>
@@ -297,11 +298,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554913397805</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="第一次测试click事件">
+      <created>1554914740614</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1554914740614</updated>
+    </task>
+    <task id="LOCAL-00017" summary="添加chai-spies">
+      <created>1554915029157</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1554915029157</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42530000" />
+    <option name="totallyTimeSpent" value="43291000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,7 +418,9 @@
     <MESSAGE value="添加chai" />
     <MESSAGE value="在页面挂载新元素；chai.js 测试" />
     <MESSAGE value="测试loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试loading" />
+    <MESSAGE value="第一次测试click事件" />
+    <MESSAGE value="添加chai-spies" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加chai-spies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -596,10 +613,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="97" column="2" selection-start-line="97" selection-start-column="2" selection-end-line="97" selection-end-column="2" />
+        <state relative-caret-position="469">
+          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#339#362#0" expanded="true" />
           </folding>
         </state>
       </provider>
