@@ -10,7 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a5c4b939-0a61-47c5-9b06-a14798451fb8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,14 +26,14 @@
     <favorites_list name="gulu" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.52061856">
+    <splitter split-orientation="horizontal" split-proportion="0.6176976">
       <split-first>
         <leaf>
           <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="504">
-                  <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+                <state relative-caret-position="451">
+                  <caret line="97" column="2" selection-start-line="97" selection-start-column="2" selection-end-line="97" selection-end-column="2" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
                   </folding>
@@ -49,8 +48,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="422">
-                  <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+                <state relative-caret-position="487">
+                  <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -154,7 +153,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -191,7 +190,7 @@
       <workItem from="1554215871988" duration="5549000" />
       <workItem from="1554390999925" duration="589000" />
       <workItem from="1554724286294" duration="7882000" />
-      <workItem from="1554898303061" duration="4001000" />
+      <workItem from="1554898303061" duration="6574000" />
     </task>
     <task id="LOCAL-00001" summary="npm install vue">
       <created>1537087460570</created>
@@ -284,11 +283,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554910997519</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="在页面挂载新元素；chai.js 测试">
+      <created>1554912088377</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554912088377</updated>
+    </task>
+    <task id="LOCAL-00015" summary="测试loading">
+      <created>1554913397805</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1554913397805</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39957000" />
+    <option name="totallyTimeSpent" value="42530000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,7 +401,9 @@
     <MESSAGE value="检测button-group组件中子组件的类型" />
     <MESSAGE value="第一个元素不用左移1px" />
     <MESSAGE value="添加chai" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加chai" />
+    <MESSAGE value="在页面挂载新元素；chai.js 测试" />
+    <MESSAGE value="测试loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试loading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -574,15 +589,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        <state relative-caret-position="487">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="451">
+          <caret line="97" column="2" selection-start-line="97" selection-start-column="2" selection-end-line="97" selection-end-column="2" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
