@@ -6,7 +6,16 @@
 
 <script>
   export default {
-    name: "button-group"
+    name: "button-group",
+    mounted(){
+      for(let node of this.$el.children){
+        let name = node.nodeName.toLowerCase()
+        if(name !== 'button'){
+          console.warn(`你输入的不是一个button，而是${name}`)
+        }
+      }
+
+    }
   }
 </script>
 
