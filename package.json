@@ -4,10 +4,6 @@
   "description": "vue造轮子",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "npx parcel index.html --no-cache",
-=======
->>>>>>> e8aefedb589a03bcc6c2bae1ca5197a1e1e80d45
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-minify --no-cache && karma start --single-run"
   },
