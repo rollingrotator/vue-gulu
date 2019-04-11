@@ -95,7 +95,7 @@ const  expect = chai.expect
   })
   button.$mount()
   let vm = button
-  let spy = chai.spy(function(){ console.log(1);})
+  let spy = chai.spy(function(){ console.log('按钮被点击了!');})
   vm.$on('click',spy)
   vm.$el.click()
   expect(spy).to.have.been.called()

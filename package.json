@@ -4,8 +4,9 @@
   "description": "vue造轮子",
   "main": "index.js",
   "scripts": {
+    "start":"npx parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-minify && karma start --single-run"
+    "test": "parcel build test/* --no-minify --no-cache && karma start --single-run"
   },
   "repository": {
     "type": "git",
