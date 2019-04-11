@@ -4,7 +4,7 @@
   "description": "vue造轮子",
   "main": "index.js",
   "scripts": {
-    "start":"npx parcel index.html --no-cache",
+    "start": "npx parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-minify --no-cache && karma start --single-run"
   },
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/rollingrotator/vue-gulu#readme",
   "dependencies": {
     "chai-spies": "^1.0.0",
-    "vue": "^2.6.9",
+    "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
   },
   "devDependencies": {

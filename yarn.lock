@@ -2673,10 +2673,10 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "http://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
-vue@^2.6.9:
-  version "2.6.9"
-  resolved "http://registry.npm.taobao.org/vue/download/vue-2.6.9.tgz#415c1cc1a5ed00c8f0acdd0a948139d12b7ea6b3"
-  integrity sha1-QVwcwaXtAMjwrN0KlIE50St+prM=
+vue@^2.6.10:
+  version "2.6.10"
+  resolved "http://registry.npm.taobao.org/vue/download/vue-2.6.10.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
+  integrity sha1-pysaQqTYKnIepDjRtr9V5mGVxjc=
 
 which-module@^2.0.0:
   version "2.0.0"
