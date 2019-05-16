@@ -2,10 +2,20 @@ import Vue from 'vue';
 import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
+import Tabs from './tabs/tabs'
+import TabsHead from './tabs/tabs-head'
+import TabsItem from './tabs/tabs-item'
+import TabsBody from './tabs/tabs-body'
+import TabsPane from './tabs/tabs-pane'
 
 Vue.component('d-button', Button);
 Vue.component('d-icon', Icon);
 Vue.component('d-button-group', ButtonGroup);
+Vue.component('d-tabs',Tabs)
+Vue.component('d-tabs-head',TabsHead)
+Vue.component('d-tabs-item',TabsItem)
+Vue.component('d-tabs-body',TabsBody)
+Vue.component('d-tabs-pane',TabsPane)
 
 new Vue({
   el: '#app',

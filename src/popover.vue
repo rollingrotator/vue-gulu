@@ -12,7 +12,7 @@
 
 <script>
   export default {
-    name: "GuluPopover",
+    name: "d-popover",
     props: {
       position: {
         type: String,
