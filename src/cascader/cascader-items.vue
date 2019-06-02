@@ -17,15 +17,13 @@
       <gulu-cascader-items ref="right" :items="rightItems" :height="height"
                            :loading-item="loadingItem"
                            :load-data="loadData"
-                           :level="level+1" :selected="selected"
-                           @update:selected="onUpdateSelected"></gulu-cascader-items>
+                           :level="level+1" :selected="selected" @update:selected="onUpdateSelected"></gulu-cascader-items>
     </div>
   </div>
 </template>
 
 <script>
-  import Icon from './icon'
-
+  import Icon from '../icon'
   export default {
     name: "GuluCascaderItems",
     components: {Icon},
@@ -53,7 +51,7 @@
       }
     },
     computed: {
-      rightItems() {
+      rightItems () {
         if (this.selected[this.level]) {
           let selected = this.items.filter((item) => item.name === this.selected[this.level].name)
           if (selected && selected[0].children && selected[0].children.length > 0) {
@@ -62,19 +60,19 @@
         }
       },
     },
-    mounted() {
+    mounted () {
     },
     methods: {
-      rightArrowVisible(item) {
+      rightArrowVisible (item) {
         return this.loadData ? !item.isLeaf : item.children
       },
-      onClickLabel(item) {
+      onClickLabel (item) {
         let copy = JSON.parse(JSON.stringify(this.selected))
         copy[this.level] = item
         copy.splice(this.level + 1) // 一句话
         this.$emit('update:selected', copy)
       },
-      onUpdateSelected(newSelected) {
+      onUpdateSelected (newSelected) {
         this.$emit('update:selected', newSelected)
       }
     }
@@ -83,7 +81,6 @@
 
 <style scoped lang="scss">
   @import "var";
-
   .cascaderItem {
     display: flex;
     align-items: flex-start;
