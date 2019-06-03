@@ -1,12 +1,12 @@
 import Vue from 'vue';
-import Button from './button/button'
-import Icon from './icon'
-import ButtonGroup from './button/button-group'
-import Tabs from './tabs/tabs'
-import TabsHead from './tabs/tabs-head'
-import TabsItem from './tabs/tabs-item'
-import TabsBody from './tabs/tabs-body'
-import TabsPane from './tabs/tabs-pane'
+import Button from '../button/button'
+import Icon from '../icon'
+import ButtonGroup from '../button/button-group'
+import Tabs from '../tabs/tabs'
+import TabsHead from '../tabs/tabs-head'
+import TabsItem from '../tabs/tabs-item'
+import TabsBody from '../tabs/tabs-body'
+import TabsPane from '../tabs/tabs-pane'
 
 Vue.component('d-button', Button);
 Vue.component('d-icon', Icon);
