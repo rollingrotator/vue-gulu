@@ -20,7 +20,7 @@
 </script>
 
 <style lang="scss">
-  @import "var";
+@import '../../styles/_var.scss';
 
   .hots-button-group {
     display: inline-flex;

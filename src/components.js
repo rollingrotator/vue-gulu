@@ -36,7 +36,7 @@ import HotsPopover from './popover'
 import HotsToast from './toast'
 
 
-export default {
+export {
   HotsButton, HotsButtonGroup,
   HotsCascader, HotsCascaderItems,
   HotsCollapse, HotsCollapseItem,

@@ -1,23 +1,47 @@
 <template>
   <div>
-    <h-button>cao</h-button>
-    <h-button-group> <h-button>nihao</h-button> <h-button>nihao</h-button></h-button-group>
-    <h-button-group>
-      <div>xx</div>
-    </h-button-group>
+    <Hots-button>xx</Hots-button>
+    <HotsButtonGroup><HotsButton>1</HotsButton><HotsButton>2</HotsButton></HotsButtonGroup>
+    <Hots-cascader>
+      <HotsCascaderItems></HotsCascaderItems>
+    </Hots-cascader>
   </div>
 
 </template>
 
 <script>
-  import HotsButton from './button/button'
-  import HotsButtonGroup from './button/button-group'
+  import {
+    HotsButton, HotsButtonGroup,
+    HotsCascader, HotsCascaderItems,
+    HotsCollapse, HotsCollapseItem,
+    HotsColumn, HotsRow,
+    HotsContent, HotsFooter, HotsHeader, HotsLayout, HotsSider,
+    HotsNav, HotsNavItem, HotsSubNav,
+    HotsSlides, HotsSlidesItem,
+    HotsTabsHead, HotsTabsItem, HotsTabsBody, HotsTabsPane, HotsTabs,
+    HotsIcon,
+    HotsInput,
+    HotsPages,
+    HotsPopover,
+    HotsToast
+  } from './components'
 
   export default {
     name: "demo",
     components: {
-      'h-button': HotsButton,
-      'h-button-group': HotsButtonGroup
+      HotsButton, HotsButtonGroup,
+      HotsCascader, HotsCascaderItems,
+      HotsCollapse, HotsCollapseItem,
+      HotsColumn, HotsRow,
+      HotsContent, HotsFooter, HotsHeader, HotsLayout, HotsSider,
+      HotsNav, HotsNavItem, HotsSubNav,
+      HotsSlides, HotsSlidesItem,
+      HotsTabsHead, HotsTabsItem, HotsTabsBody, HotsTabsPane, HotsTabs,
+      HotsIcon,
+      HotsInput,
+      HotsPages,
+      HotsPopover,
+      HotsToast
     }
   }
 </script>
