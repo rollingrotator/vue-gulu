@@ -15,7 +15,7 @@
 <script>
   //构造组件的选项
   export default {
-    name: 'hotsToast',
+    name: 'HotsToast',
     props: {
       autoClose: {
         type: [Boolean, Number],

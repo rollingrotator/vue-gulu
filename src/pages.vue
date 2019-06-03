@@ -50,10 +50,10 @@
 </style>
 
 <script>
-  import GIcon from './icon'
+  import HotsIcon from './icon'
   export default {
-    name: "hotsPager",
-    components: {GIcon},
+    name: "HotsPager",
+    components: {HotsIcon},
     props: {
       totalPage: {
         type: Number,

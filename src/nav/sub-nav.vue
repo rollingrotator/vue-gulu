@@ -3,10 +3,10 @@
     <span class="g-sub-nav-label" @click="onClick">
       <slot name="title"></slot>
       <span class="g-sub-nav-icon" :class="{open}">
-        <g-icon name="right"></g-icon>
+        <h-icon name="right"></h-icon>
       </span>
     </span>
-    <div class="g-sub-nav-popover" v-show="open">
+    <div class="h-sub-nav-popover" v-show="open">
       <slot></slot>
     </div>
   </div>
@@ -14,11 +14,11 @@
 
 <script>
   import ClickOutside from '../click-outside'
-  import GIcon from '../icon'
+  import HotsIcon from '../icon'
   export default {
-    components: {GIcon},
+    components: {'h-icon':HotsIcon},
     directives: {ClickOutside},
-    name: "GuluSubNav",
+    name: "HotsSubNav",
     inject: ['root'],
     props: {
       name: {
@@ -57,7 +57,7 @@
 
 <style scoped lang="scss">
   @import "var";
-  .g-sub-nav {
+  .h-sub-nav {
     position: relative;
     &.active {
       &::after {

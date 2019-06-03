@@ -13,6 +13,7 @@
   import Icon from '../icon'
   export default {
     // props: ['icon', 'iconPosition'],
+    name:'HotsButton',
     components:{'h-icon': Icon},
     props: {
       'icon': {},
@@ -54,7 +55,7 @@
     &:focus {
       outline: none;
     }
-    > .gulu-button-content {
+    > .hots-button-content {
       order: 2;
     }
     > .icon {
@@ -63,7 +64,7 @@
     }
 
     &.icon-right {
-      > .gulu-button-content {
+      > .hots-button-content {
         order: 1;
       }
       > .icon {

@@ -1,17 +1,17 @@
 <template>
-  <div class="gulu-content">
+  <div class="hots-content">
     <slot></slot>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'GuluContent'
+    name: 'HotsContent'
   }
 </script>
 
 <style lang="scss" scoped>
-  .gulu-content {
+  .hots-content {
     flex-grow: 1;
   }
 </style>

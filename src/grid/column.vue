@@ -15,7 +15,7 @@
     return valid
   }
   export default {
-    name: 'GuluCol',
+    name: 'HotsCol',
     props: {
       span: {
         type: [Number, String]

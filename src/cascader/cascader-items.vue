@@ -14,19 +14,19 @@
       </div>
     </div>
     <div class="right" v-if="rightItems">
-      <gulu-cascader-items ref="right" :items="rightItems" :height="height"
+      <hots-cascader-items ref="right" :items="rightItems" :height="height"
                            :loading-item="loadingItem"
                            :load-data="loadData"
-                           :level="level+1" :selected="selected" @update:selected="onUpdateSelected"></gulu-cascader-items>
+                           :level="level+1" :selected="selected" @update:selected="onUpdateSelected"></hots-cascader-items>
     </div>
   </div>
 </template>
 
 <script>
-  import Icon from '../icon'
+  import HotsIcon from '../icon'
   export default {
-    name: "GuluCascaderItems",
-    components: {Icon},
+    name: "HotsCascaderItems",
+    components: {HotsIcon},
     props: {
       items: {
         type: Array

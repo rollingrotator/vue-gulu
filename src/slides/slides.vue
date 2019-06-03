@@ -26,9 +26,10 @@
 </template>
 
 <script>
-  import GIcon from '../icon'
+  import HotsIcon from '../icon'
   export default {
-    components: {GIcon},
+    name:'HotsSlides',
+    components: {HotsIcon},
     props: {
       selected: {
         type: String,
@@ -72,7 +73,7 @@
         return this.items.map(vm => vm.name)
       },
       items () {
-        return this.$children.filter(vm => vm.$options.name === 'GuluSlidesItem')
+        return this.$children.filter(vm => vm.$options.name === 'HotsSlidesItem')
       }
     },
     methods: {

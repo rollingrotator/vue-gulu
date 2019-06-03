@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: "GuluNavItem",
+    name: "HotsNavItem",
     inject: ['root'],
     props: {
       name: {

@@ -13,10 +13,10 @@
   </div>
 </template>
 <script>
-  import Icon from './icon'
+  import HotsIcon from './icon'
   export default {
-    components: {Icon},
-    name: 'GuluInput',
+    components: {HotsIcon},
+    name: 'HotsInput',
     props: {
       value: {
         type: String

@@ -1,18 +1,18 @@
 <template>
-  <svg class="d-icon" aria-hidden="true" >
+  <svg class="hots-icon" aria-hidden="true" >
     <use :xlink:href="`#icon-${name}`"></use>
   </svg>
 </template>
 
 <script>
   export default {
-    name: "d-icon",
+    name: "HotsIcon",
     props:['name']
   }
 </script>
 
 <style lang="scss">
-  .d-icon {
+  .hots-icon {
     width: 1em; height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
