@@ -1,4 +1,4 @@
-<template>
+<template xmlns:>
   <div class="cascaderItem" :style="{height: height}">
     <div class="left">
       <div class="label" v-for="item in items" @click="onClickLabel(item)">
@@ -17,7 +17,9 @@
       <hots-cascader-items ref="right" :items="rightItems" :height="height"
                            :loading-item="loadingItem"
                            :load-data="loadData"
-                           :level="level+1" :selected="selected" @update:selected="onUpdateSelected"></hots-cascader-items>
+                           :level="level+1" :selected="selected"
+                           @update:selected="onUpdateSelected">
+      </hots-cascader-items>
     </div>
   </div>
 </template>

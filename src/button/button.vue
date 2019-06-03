@@ -1,5 +1,5 @@
 <template>
-  <button class="hots-button" :class="{[`icon-${iconPosition}`]: true}"
+  <button class="h-button" :class="{[`icon-${iconPosition}`]: true}"
     @click="$emit('click')">
     <h-icon v-if="icon && !loading" :name="icon" class="icon"></h-icon>
     <h-icon name="loading" v-if="loading" class="loading icon"></h-icon>
@@ -35,7 +35,7 @@
 
 <style lang="scss" scoped>
   @import "var"; // webpack 配置 scss 根目录
-  .hots-button {
+  .h-button {
     font-size: $font-size;
     height: $button-height;
     padding: 0 1em;
