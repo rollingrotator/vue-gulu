@@ -1,21 +1,21 @@
 <template>
-  <div class="gulu-pager" :class="{hide: hideIfOnePage === true && totalPage <= 1}">
-    <span class="gulu-pager-nav prev" :class="{disabled:currentPage===1}"
+  <div class="hots-pager" :class="{hide: hideIfOnePage === true && totalPage <= 1}">
+    <span class="hots-pager-nav prev" :class="{disabled:currentPage===1}"
           @click="onClickPage(currentPage-1)">
       <g-icon name="left"></g-icon>
     </span>
     <template v-for="page in pages">
       <template v-if="page === currentPage">
-        <span class="gulu-pager-item current">{{page}}</span>
+        <span class="hots-pager-item current">{{page}}</span>
       </template>
       <template v-else-if="page === '...'">
-        <g-icon class="gulu-pager-separator" name="dots"></g-icon>
+        <g-icon class="hots-pager-separator" name="dots"></g-icon>
       </template>
       <template v-else>
-        <span class="gulu-pager-item other" @click="onClickPage(page)">{{page}}</span>
+        <span class="hots-pager-item other" @click="onClickPage(page)">{{page}}</span>
       </template>
     </template>
-    <span class="gulu-pager-nav next" :class="{disabled: currentPage===totalPage}"
+    <span class="hots-pager-nav next" :class="{disabled: currentPage===totalPage}"
           @click="onClickPage(currentPage+1)">
       <g-icon name="right"></g-icon>
     </span>
@@ -23,7 +23,7 @@
 </template>
 <style scoped lang="scss">
   @import "var";
-  .gulu-pager { display: flex; justify-content: flex-start; align-items: center; user-select: none;
+  .hots-pager { display: flex; justify-content: flex-start; align-items: center; user-select: none;
     $width: 20px; $height: 20px; $font-size: 12px;
     &.hide { display: none; }
     &-separator {
@@ -52,7 +52,7 @@
 <script>
   import GIcon from './icon'
   export default {
-    name: "GuluPager",
+    name: "hotsPager",
     components: {GIcon},
     props: {
       totalPage: {

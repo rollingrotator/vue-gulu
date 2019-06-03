@@ -1,5 +1,5 @@
 <template>
-  <div class="d-button-group">
+  <div class="hots-button-group">
     <slot></slot>
   </div>
 </template>
@@ -20,10 +20,10 @@
 </script>
 
 <style lang="scss">
-  .d-button-group{
+  .hots-button-group{
     display: inline-flex;
     vertical-align: middle;
-    > .d-button{
+    > .h-button{
       border-radius: 0;
       &:not(:first-child){
         margin-left: -1px;
