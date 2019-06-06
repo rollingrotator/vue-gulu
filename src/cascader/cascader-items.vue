@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <template xmlns:>
   <div class="cascaderItem" :style="{height: height}">
     <div class="left">
@@ -14,11 +15,13 @@
       </div>
     </div>
     <div class="right" v-if="rightItems">
-      <hots-cascader-items ref="right" :items="rightItems" :height="height"
-                           :loading-item="loadingItem"
-                           :load-data="loadData"
-                           :level="level+1" :selected="selected"
-                           @update:selected="onUpdateSelected">
+      <hots-cascader-items
+          ref="right" :items="rightItems"
+          :height="height"
+          :loading-item="loadingItem"
+          :load-data="loadData"
+          :level="level+1" :selected="selected"
+          @update:selected="onUpdateSelected">
       </hots-cascader-items>
     </div>
   </div>
@@ -26,6 +29,7 @@
 
 <script>
   import HotsIcon from '../icon'
+
   export default {
     name: "HotsCascaderItems",
     components: {HotsIcon},
@@ -53,7 +57,7 @@
       }
     },
     computed: {
-      rightItems () {
+      rightItems() {
         if (this.selected[this.level]) {
           let selected = this.items.filter((item) => item.name === this.selected[this.level].name)
           if (selected && selected[0].children && selected[0].children.length > 0) {
@@ -62,19 +66,19 @@
         }
       },
     },
-    mounted () {
+    mounted() {
     },
     methods: {
-      rightArrowVisible (item) {
+      rightArrowVisible(item) {
         return this.loadData ? !item.isLeaf : item.children
       },
-      onClickLabel (item) {
+      onClickLabel(item) {
         let copy = JSON.parse(JSON.stringify(this.selected))
         copy[this.level] = item
         copy.splice(this.level + 1) // 一句话
         this.$emit('update:selected', copy)
       },
-      onUpdateSelected (newSelected) {
+      onUpdateSelected(newSelected) {
         this.$emit('update:selected', newSelected)
       }
     }
@@ -83,6 +87,7 @@
 
 <style scoped lang="scss">
   @import "var";
+
   .cascaderItem {
     display: flex;
     align-items: flex-start;
