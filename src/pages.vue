@@ -1,15 +1,16 @@
+<!--suppress CssUnknownTarget -->
 <template>
   <div class="hots-pager" :class="{hide: hideIfOnePage === true && totalPage <= 1}">
     <span class="hots-pager-nav prev" :class="{disabled:currentPage===1}"
           @click="onClickPage(currentPage-1)">
-      <g-icon name="left"></g-icon>
+      <h-icon name="left"></h-icon>
     </span>
     <template v-for="page in pages">
       <template v-if="page === currentPage">
         <span class="hots-pager-item current">{{page}}</span>
       </template>
       <template v-else-if="page === '...'">
-        <g-icon class="hots-pager-separator" name="dots"></g-icon>
+        <h-icon class="hots-pager-separator" name="dots"></h-icon>
       </template>
       <template v-else>
         <span class="hots-pager-item other" @click="onClickPage(page)">{{page}}</span>
@@ -17,7 +18,7 @@
     </template>
     <span class="hots-pager-nav next" :class="{disabled: currentPage===totalPage}"
           @click="onClickPage(currentPage+1)">
-      <g-icon name="right"></g-icon>
+      <h-icon name="right"></h-icon>
     </span>
   </div>
 </template>
@@ -53,7 +54,7 @@
   import HotsIcon from './icon'
   export default {
     name: "HotsPager",
-    components: {HotsIcon},
+    components: {'h-icon':HotsIcon},
     props: {
       totalPage: {
         type: Number,
