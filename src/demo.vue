@@ -1,6 +1,10 @@
 <template>
   <div>
     <Hots-button>xx</Hots-button>
+    <Hots-button :iconPosition="'right'"
+    :loading="true">xx</Hots-button>
+    <Hots-button :iconPosition="'left'"
+                 :loading="true">xx</Hots-button>
     <HotsButtonGroup><HotsButton>1</HotsButton><HotsButton>2</HotsButton></HotsButtonGroup>
     <Hots-cascader>
       <HotsCascaderItems></HotsCascaderItems>
