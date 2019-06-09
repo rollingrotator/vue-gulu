@@ -34,7 +34,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "var"; // webpack 配置 scss 根目录
+  @import '../../styles/_var.scss';
   .h-button {
     font-size: $font-size;
     height: $button-height;
