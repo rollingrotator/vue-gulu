@@ -4,13 +4,31 @@ module.exports = {
   themeConfig: {
     sidebar: [
       '/',
-      '/install/',
-      ['/get-started/', 'Explicit link text']
+      {
+        title: '启动',
+        collapsable: false,
+        children: [
+          ['/install/', '安装'],
+          ['/get-started/', '开始'],
+        ]
+      },
+      {
+        title: '组件',
+        children: [['/components/button','按钮']],
+        collapsable: false
+      },
+
     ],
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
-      { text: 'External', link: 'https://google.com' },
+      {text: 'Home', link: '/'},
+      {
+        text: 'Guide',
+        items: [
+          {text: 'Chinese', link: '/language/chinese'},
+          {text: 'Japanese', link: '/language/japanese'}
+        ]
+      },
+      {text: 'External', link: 'https://google.com'},
     ]
   },
   //这下里面用来展示代码行号
