@@ -1,10 +1,11 @@
 <template>
-  <svg class="hots-icon" aria-hidden="true" >
+  <svg class="hots-icon" aria-hidden="true" @click="$emit('click', $event)" >
     <use :xlink:href="`#icon-${name}`"></use>
   </svg>
 </template>
 
 <script>
+  import './svg'
   export default {
     name: "HotsIcon",
     props:['name']

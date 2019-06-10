@@ -3,7 +3,7 @@
     @click="$emit('click')">
     <h-icon v-if="icon && !loading" :name="icon" class="icon"></h-icon>
     <h-icon name="loading" v-if="loading" class="loading icon"></h-icon>
-    <div class="content">
+    <div class="hots-button-content">
       <slot></slot>
     </div>
   </button>
@@ -12,7 +12,6 @@
 <script>
   import Icon from '../icon'
   export default {
-    // props: ['icon', 'iconPosition'],
     name:'HotsButton',
     components:{'h-icon': Icon},
     props: {
@@ -35,6 +34,8 @@
 
 <style lang="scss" scoped>
   @import '../../styles/_var.scss';
+  $border-color-hover:#229ffd;
+  $button-active-bg:lighten($border-color-hover,40%);
   .h-button {
     font-size: $font-size;
     height: $button-height;
@@ -50,7 +51,7 @@
       border-color: $border-color-hover;
     }
     &:active {
-      backgroung-color: $button-active-bg;
+      background-color: $button-active-bg;
     }
     &:focus {
       outline: none;

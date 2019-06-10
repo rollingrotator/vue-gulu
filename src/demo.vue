@@ -2,10 +2,21 @@
   <div>
     <Hots-button>xx</Hots-button>
     <Hots-button :iconPosition="'right'"
-    :loading="true">xx</Hots-button>
+                 :icon="'setting'"
+    >xx
+    </Hots-button>
     <Hots-button :iconPosition="'left'"
-                 :loading="true">xx</Hots-button>
-    <HotsButtonGroup><HotsButton>1</HotsButton><HotsButton>2</HotsButton></HotsButtonGroup>
+                 :loading="a"
+                 @click="a=!a"
+    >yy
+    </Hots-button>
+    <div>
+      <HotsButtonGroup>
+        <HotsButton>prev</HotsButton>
+        <HotsButton>next</HotsButton>
+      </HotsButtonGroup>
+    </div>
+
     <Hots-cascader>
       <HotsCascaderItems></HotsCascaderItems>
     </Hots-cascader>
@@ -46,6 +57,16 @@
       HotsPages,
       HotsPopover,
       HotsToast
+    },
+    data(){
+      return{
+        a:false
+      }
+    },
+    methods:{
+      xx(e){
+        console.log(e);
+      }
     }
   }
 </script>
