@@ -1,5 +1,7 @@
 module.exports = {
   title: 'Hots-UI',
+  dest: './dist',
+  base:'/hots/',
   description: '这是一个以风暴英雄为主题的vue-ui库',
   themeConfig: {
     nav: [
@@ -33,7 +35,5 @@ module.exports = {
   },
   markdown: {
     lineNumbers: true
-  },
-  base:'/hots/',
-  dest:'./dist'
+  }
 }
