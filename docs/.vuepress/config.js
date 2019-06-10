@@ -34,5 +34,6 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  base:'/hots/'
+  base:'/hots/',
+  dest:'public'
 }
