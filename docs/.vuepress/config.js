@@ -34,5 +34,5 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  base:'/hots/docs/.vuepress/'
+  base:'/hots/'
 }
