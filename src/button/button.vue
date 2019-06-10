@@ -1,4 +1,5 @@
 <template>
+<template>
   <button class="h-button" :class="{[`icon-${iconPosition}`]: true}"
     @click="$emit('click')">
     <h-icon v-if="icon && !loading" :name="icon" class="icon"></h-icon>
