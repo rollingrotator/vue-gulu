@@ -10,7 +10,9 @@
     "test:unit": "cross-env BABEL_ENV=test karma start",
     "test:unit:old": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy": "gh-pages -d dist",
+    "deploy:build": "npm run docs:build && gh-pages -d dist"
   },
   "dependencies": {
     "vue": "^2.5.17"
@@ -23,6 +25,7 @@
     "babel-plugin-istanbul": "^5.1.0",
     "chai": "^4.1.2",
     "cross-env": "^5.2.0",
+    "gh-pages": "^2.0.1",
     "karma": "^3.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",

@@ -35,5 +35,5 @@ module.exports = {
     lineNumbers: true
   },
   base:'/hots/',
-  dest:'public'
+  dest:'./dist'
 }
