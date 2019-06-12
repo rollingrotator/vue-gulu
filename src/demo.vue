@@ -10,16 +10,48 @@
                  @click="a=!a"
     >yy
     </Hots-button>
+
+    <!--buttonGroup-->
+    <!--输入的必须是button否则警告-->
     <div>
       <HotsButtonGroup>
-        <HotsButton>prev</HotsButton>
-        <HotsButton>next</HotsButton>
+        <HotsButton icon="left">prev</HotsButton>
+        <HotsButton>current</HotsButton>
+        <HotsButton icon="right" iconPosition="right">next</HotsButton>
       </HotsButtonGroup>
     </div>
 
-    <Hots-cascader>
-      <HotsCascaderItems></HotsCascaderItems>
-    </Hots-cascader>
+    <!--input-->
+    <div>
+      <HotsInput value="default" v-model="message"></HotsInput>
+      <HotsInput disabled value="disabled"></HotsInput>
+      <HotsInput readonly value="readonly"></HotsInput>
+      <HotsInput error="pop error!"></HotsInput>
+    </div>
+
+    <!--cascader-->
+    <div>
+      <HotsCascader :source="source"
+                    popoverHeight="300px"
+                    :selected.sync='selected'
+      >
+        <!--:selected="selected"@update:selected="selected = $event"-->
+      </HotsCascader>
+      <div>{{selected}}</div>
+    </div>
+    
+    <!--slider-->
+    <HotsSlides :selected.sync="selected2">
+      <HotsSlidesItem name="1">
+        <div class="box">1</div>
+      </HotsSlidesItem>
+      <HotsSlidesItem name="2">
+        <div class="box">2</div>
+      </HotsSlidesItem>
+      <HotsSlidesItem name="3">
+        <div class="box">3</div>
+      </HotsSlidesItem>
+    </HotsSlides>
   </div>
 
 </template>
@@ -40,6 +72,7 @@
     HotsPopover,
     HotsToast
   } from './components'
+  import db from '../tests/fixtures/db'
 
   export default {
     name: "demo",
@@ -58,19 +91,63 @@
       HotsPopover,
       HotsToast
     },
-    data(){
-      return{
-        a:false
+    data() {
+      return {
+        a: false,
+        message: 'default',
+        source: [
+          {
+            name: '浙江',
+            children: [
+              {
+                name: '杭州',
+                children: [
+                  {
+                    name: '上城区'
+                  },
+                  {
+                    name: '下城区'
+                  },
+
+                ]
+              },
+              {
+                name: '河南',
+                children: [
+                  {
+                    name: '安阳',
+                    children: [
+                      {
+                        name: '北关区'
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name:'江苏'
+          }
+        ],
+        selected: [],
+
+
+        selected2:'1'
       }
     },
-    methods:{
-      xx(e){
-        console.log(e);
-      }
-    }
+    methods: {}
   }
 </script>
 
 <style scoped>
-
+ .box{
+  height: 300px;
+  background: blue;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>

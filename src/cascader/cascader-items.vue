@@ -1,15 +1,16 @@
-<!--suppress ALL -->
-<template xmlns:>
+
+<!--suppress XmlUnboundNsPrefix, CssUnknownTarget -->
+<template >
   <div class="cascaderItem" :style="{height: height}">
     <div class="left">
       <div class="label" v-for="item in items" @click="onClickLabel(item)">
         <span class="name">{{item.name}}</span>
         <span class="icons">
           <template v-if="item.name === loadingItem.name">
-            <icon class="loading" name="loading"></icon>
+            <HotsIcon class="loading" name="loading"></HotsIcon>
           </template>
           <template v-else>
-            <icon class="next" v-if="rightArrowVisible(item)" name="right"></icon>
+            <HotsIcon class="next" v-if="rightArrowVisible(item)" name="right"></HotsIcon>
           </template>
         </span>
       </div>
@@ -73,9 +74,10 @@
         return this.loadData ? !item.isLeaf : item.children
       },
       onClickLabel(item) {
+        //将selected复制后改动选中项,清除之后项,发布改动后的copy替换selected
         let copy = JSON.parse(JSON.stringify(this.selected))
         copy[this.level] = item
-        copy.splice(this.level + 1) // 一句话
+        copy.splice(this.level + 1)
         this.$emit('update:selected', copy)
       },
       onUpdateSelected(newSelected) {

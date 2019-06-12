@@ -11,7 +11,7 @@
     </div>
     <div class="g-slides-dots">
       <span @click="onClickPrev" data-action="prev">
-        <g-icon name="left"></g-icon>
+        <HotsIcon name="left"></HotsIcon>
       </span>
       <span v-for="n in childrenLength" :class="{active: selectedIndex === n-1}"
             :key="n" :data-index="n-1"
@@ -19,7 +19,7 @@
         {{n}}
       </span>
       <span @click="onClickNext" data-action="next">
-        <g-icon name="right"></g-icon>
+        <HotsIcon name="right"></HotsIcon>
       </span>
     </div>
   </div>
