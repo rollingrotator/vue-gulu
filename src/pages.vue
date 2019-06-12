@@ -1,30 +1,29 @@
-<!--suppress CssUnknownTarget -->
 <template>
-  <div class="hots-pager" :class="{hide: hideIfOnePage === true && totalPage <= 1}">
-    <span class="hots-pager-nav prev" :class="{disabled:currentPage===1}"
+  <div class="Hots-pager" :class="{hide: hideIfOnePage === true && totalPage <= 1}">
+    <span class="Hots-pager-nav prev" :class="{disabled:currentPage===1}"
           @click="onClickPage(currentPage-1)">
       <h-icon name="left"></h-icon>
     </span>
     <template v-for="page in pages">
       <template v-if="page === currentPage">
-        <span class="hots-pager-item current">{{page}}</span>
+        <span class="Hots-pager-item current">{{page}}</span>
       </template>
       <template v-else-if="page === '...'">
-        <h-icon class="hots-pager-separator" name="dots"></h-icon>
+        <h-icon class="Hots-pager-separator" name="setting"></h-icon>
       </template>
       <template v-else>
-        <span class="hots-pager-item other" @click="onClickPage(page)">{{page}}</span>
+        <span class="Hots-pager-item other" @click="onClickPage(page)">{{page}}</span>
       </template>
     </template>
-    <span class="hots-pager-nav next" :class="{disabled: currentPage===totalPage}"
+    <span class="Hots-pager-nav next" :class="{disabled: currentPage===totalPage}"
           @click="onClickPage(currentPage+1)">
       <h-icon name="right"></h-icon>
     </span>
   </div>
 </template>
 <style scoped lang="scss">
-  @import "var";
-  .hots-pager { display: flex; justify-content: flex-start; align-items: center; user-select: none;
+  @import "../styles/var";
+  .Hots-pager { display: flex; justify-content: flex-start; align-items: center; user-select: none;
     $width: 20px; $height: 20px; $font-size: 12px;
     &.hide { display: none; }
     &-separator {
@@ -102,6 +101,3 @@
     return Object.keys(object).map((s) => parseInt(s, 10))
   }
 </script>
-
-<style scoped lang="scss">
-</style>

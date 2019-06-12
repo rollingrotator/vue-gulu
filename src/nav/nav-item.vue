@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <template>
   <div class="g-nav-item" :class="{selected}" @click="onClick">
     <slot></slot>
@@ -33,7 +34,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "var";
+  @import '../../styles/_var.scss';
   .g-nav-item {
     padding: 10px 20px;
     position: relative;

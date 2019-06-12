@@ -1,3 +1,4 @@
+<!--suppress CssUnknownTarget -->
 <template>
   <div class="g-nav">
     <slot></slot>
@@ -68,7 +69,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "var";
+  @import '../../styles/_var.scss';
   .g-nav {
     display: flex;
     border-bottom: 1px solid $grey;

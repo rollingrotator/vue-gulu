@@ -25,7 +25,10 @@ module.exports = {
       {
         title: '组件',
         children: [
-            ['/components/button','按钮']
+            ['/components/button','按钮'],
+            ['/components/slides','轮播'],
+          ['/components/nav','nav'],
+          ['/components/pages','pages'],
         ]
       }
     ],

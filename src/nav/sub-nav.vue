@@ -1,3 +1,4 @@
+<!--suppress CssUnknownTarget -->
 <template>
   <div class="g-sub-nav" :class="{active}" v-click-outside="close">
     <span class="g-sub-nav-label" @click="onClick">
@@ -56,7 +57,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "var";
+  @import '../../styles/_var.scss';
   .h-sub-nav {
     position: relative;
     &.active {

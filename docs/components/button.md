@@ -2,8 +2,6 @@
 title:'button'
 ---
 
-
-##  按钮
 ### 展示
 <ClientOnly><use-button></use-button></ClientOnly>
 

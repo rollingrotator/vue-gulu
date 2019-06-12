@@ -39,21 +39,72 @@
       </HotsCascader>
       <div>{{selected}}</div>
     </div>
-    
-    <!--slider-->
-    <HotsSlides :selected.sync="selected2">
-      <HotsSlidesItem name="1">
-        <div class="box">1</div>
-      </HotsSlidesItem>
-      <HotsSlidesItem name="2">
-        <div class="box">2</div>
-      </HotsSlidesItem>
-      <HotsSlidesItem name="3">
-        <div class="box">3</div>
-      </HotsSlidesItem>
-    </HotsSlides>
+    <div>
+      <!--slider-->
+      <HotsSlides :selected.sync="selected2">
+        <HotsSlidesItem name="1">
+          <div class="box">1</div>
+        </HotsSlidesItem>
+        <HotsSlidesItem name="2">
+          <div class="box">2</div>
+        </HotsSlidesItem>
+        <HotsSlidesItem name="3">
+          <div class="box">3</div>
+        </HotsSlidesItem>
+      </HotsSlides>
+    </div>
+    <div>
+      <!--popover-->
+      <HotsPopover>
+        <template>
+          <button>点我</button>
+        </template>
+        <template slot="content">
+          弹出内容
+        </template>
+      </HotsPopover>
+    </div>
+    <div>
+      <!--nav-->
+        <HotsNav :selected.sync="selected">
+          <HotsNavItem name="home">首页</HotsNavItem>
+          <HotsSubNav name="about">
+            <template slot="title">关于</template>
+            <HotsNavItem name="culture">企业文化</HotsNavItem>
+            <HotsNavItem name="developers">开发团队</HotsNavItem>
+            <HotsSubNav name="contacts">
+              <template slot="title">联系方式</template>
+              <HotsNavItem name="wechat">微信</HotsNavItem>
+              <HotsNavItem name="qq">QQ</HotsNavItem>
+              <HotsSubNav name="phone">
+                <template slot="title">手机</template>
+                <HotsNavItem name="cm">移动</HotsNavItem>
+                <HotsNavItem name="cu">联通</HotsNavItem>
+                <HotsNavItem name="cn">电信</HotsNavItem>
+              </HotsSubNav>
+            </HotsSubNav>
+          </HotsSubNav>
+          <HotsNavItem name="hire">招聘</HotsNavItem>
+        </Hotsnav>
+        <p>你好，我是中文</p>
+      </div>
+    <div>
+      <!--pages-->
+      <HotsPages :totalPage="20"
+      :currentPage.sync="currentPage"
+      ></HotsPages>
+    </div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
   </div>
-
 </template>
 
 <script>
@@ -127,27 +178,30 @@
             ]
           },
           {
-            name:'江苏'
+            name: '江苏'
           }
         ],
         selected: [],
 
 
-        selected2:'1'
+        selected2: '1',
+        selected3: ['culture'],
+        currentPage:10
       }
     },
-    methods: {}
+    methods: {
+    }
   }
 </script>
 
 <style scoped>
- .box{
-  height: 300px;
-  background: blue;
-  color: white;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .box {
+    height: 300px;
+    background: blue;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
