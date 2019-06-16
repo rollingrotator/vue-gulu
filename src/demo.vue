@@ -51,6 +51,12 @@
         <HotsSlidesItem name="3">
           <div class="box">3</div>
         </HotsSlidesItem>
+        <HotsSlidesItem name="4">
+          <div class="box">4</div>
+        </HotsSlidesItem>
+        <HotsSlidesItem name="5">
+          <div class="box">5</div>
+        </HotsSlidesItem>
       </HotsSlides>
     </div>
     <div>
@@ -117,6 +123,40 @@
           </template>
         </HotsTable>
       </div>
+    </div>
+
+    <div>
+      <HotsRow gutter="2" align="right">
+        <HotsColumn style="background: red" span="12">123</HotsColumn>
+        <HotsColumn span="12" >435</HotsColumn>
+      </HotsRow>
+    </div>
+
+    <div>
+      <HotsTabs :selected.sync="selectedTab" @update:selected="yyy">
+        <HotsTabsHead>
+          <HotsTabsItem name="woman">
+            <HotsIcon name="setting"></HotsIcon>美女
+          </HotsTabsItem>
+          <HotsTabsItem name="finance">
+            财经
+          </HotsTabsItem>
+          <HotsTabsItem name="sports">
+            体育
+          </HotsTabsItem>
+        </HotsTabsHead>
+        <HotsTabsBody>
+          <HotsTabsPane name="woman">
+            美女相关资讯
+          </HotsTabsPane>
+          <HotsTabsPane name="finance">
+            财经相关资讯
+          </HotsTabsPane>
+          <HotsTabsPane name="sports">
+            体育相关资讯
+          </HotsTabsPane>
+        </HotsTabsBody>
+      </HotsTabs>
     </div>
   </div>
 
@@ -203,6 +243,7 @@
         currentPage:10,
         currentPage4: 1,
         selected4: [],
+        selectedTab: 'sports',
         columns: [
           {text: '姓名', field: 'name', width: 100}, // 1
           {text: '分数', field: 'score'},
@@ -248,7 +289,11 @@
           this.dataSource = this.dataSource.sort((a, b) => a.score - b.score)
           this.loading = false
         }, 3000)
-      }
+      },
+      yyy(data){
+        console.log('yyy')
+        console.log(data)
+      },
     }
   }
 </script>

@@ -18,21 +18,27 @@ module.exports = {
         title: '启动',
         collapsable: false,
         children: [
-          ['/install/', '安装'],
+          // ['/install/', '安装'],
           ['/get-started/', '开始']
         ]
       },
       {
         title: '组件',
+        collapsable: false,
         children: [
             ['/components/button','按钮'],
             ['/components/slides','轮播'],
-          ['/components/nav','nav'],
-          ['/components/pages','pages'],
-          ['/components/table','table'],
-          ['/components/sticky','sticky'],
-          ['/components/cascader','cascader'],
-          ['/components/collapse','collapse'],
+            ['/components/pages','pages'],
+            ['/components/table','table'],
+            ['/components/sticky','sticky'],
+            ['/components/cascader','cascader'],
+            ['/components/collapse','collapse'],
+            ['/components/layout','layout'],
+            ['/components/popover','popover'],
+            ['/components/toast','toast'],
+            ['/components/grid','grid'],
+            ['/components/tabs','tabs'],
+            ['/components/nav','nav'],
 
 
         ]

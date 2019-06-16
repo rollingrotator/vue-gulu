@@ -40,7 +40,7 @@
       },
       autoPlayDelay:{
         type: Number,
-        default: 3000
+        default: 1800
       }
     },
     data () {
@@ -108,9 +108,12 @@
         })
       },
       onClickPrev () {
+
         this.select(this.selectedIndex - 1)
       },
       onClickNext () {
+        console.log(this.lastSelectedIndex);
+        console.log(this.selectedIndex);
         this.select(this.selectedIndex + 1)
       },
       playAutomatically () {
