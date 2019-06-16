@@ -34,7 +34,7 @@ import HotsInput from './input'
 import HotsPages from './pages'
 import HotsPopover from './popover'
 import HotsToast from './toast'
-
+import HotsTable from './table'
 
 export {
   HotsButton, HotsButtonGroup,
@@ -49,5 +49,6 @@ export {
   HotsInput,
   HotsPages,
   HotsPopover,
-  HotsToast
+  HotsToast,
+  HotsTable
 }

@@ -120,7 +120,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "var";
+  @import "../../styles/var";
 
   .cascader {
     display: inline-block;

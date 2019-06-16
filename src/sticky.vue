@@ -69,8 +69,10 @@
 
 <style scoped lang="scss">
   .hots-sticky {
+    z-index: 3;
     &.sticky {
       position: fixed;
     }
+
   }
 </style>

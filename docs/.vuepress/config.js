@@ -29,6 +29,12 @@ module.exports = {
             ['/components/slides','轮播'],
           ['/components/nav','nav'],
           ['/components/pages','pages'],
+          ['/components/table','table'],
+          ['/components/sticky','sticky'],
+          ['/components/cascader','cascader'],
+          ['/components/collapse','collapse'],
+
+
         ]
       }
     ],
