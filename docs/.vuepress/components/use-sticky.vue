@@ -3,14 +3,11 @@
   <div style="display: flex; justify-content: center;">
     <div style="width: 600px; border: 1px solid black;">
       <p>段落1</p>
-      <p>段落2</p>
-      <p>段落3</p>
       <HotsSticky :distance="50">
-        <div style="border: 1px solid red; ">
+        <div style="border: 1px solid red; background-color: #ccc; height: 60px background-size: cover;">
           <img src="https://i.loli.net/2018/11/24/5bf94b2047e33.png" alt="">
         </div>
       </HotsSticky>
-      <p>段落1</p>
       <p>段落2</p>
       <p>段落3</p>
       <p>段落4</p>

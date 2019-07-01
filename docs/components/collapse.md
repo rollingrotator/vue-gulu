@@ -9,23 +9,19 @@ title:'collapse'
 ### 可选参数
 
 
-z-index 值默认为3,如有需要请自行更改.
+selectedTab 接收一个数组用来展示默认展开数据.
 
 
 
 ### 示例
 ```
-  <div>
-     <Hotstable class="wrapper" width="300px" height="200px" :selected.sync="selected">
-       <HotstableItem name="1">
-         <div class="box">1</div>
-       </HotstableItem>
-       <HotstableItem name="2">
-         <div class="box">2</div>
-       </HotstableItem>
-       <HotstableItem name="3">
-         <div class="box">3</div>
-       </HotstableItem>
-     </Hotstable>
-   </div>
+  <div  style="padding: 100px;">
+    <HotsCollapse :selected.sync="selectedTab">
+      <HotsCollapseItem title="标题1" name="1">内容1</HotsCollapseItem>
+      <HotsCollapseItem title="标题2" name="2">内容2</HotsCollapseItem>
+      <HotsCollapseItem title="标题3" name="3">内容3</HotsCollapseItem>
+    </HotsCollapse>
+    {{selectedTab}}
+
+  </div>
 ```

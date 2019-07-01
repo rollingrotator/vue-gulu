@@ -7,7 +7,7 @@ title:'slides'
 <ClientOnly><use-slides></use-slides></ClientOnly>
 
 ### 可选参数
-
+autoPlay/autoPlayDelay/selected
 
 
 

@@ -1,19 +1,29 @@
 <template>
   <div>
-    <h-button >默认</h-button>
-    <h-button icon="setting">设置</h-button>
-    <h-button :loading="loading" @click="loading=!loading">点击切换状态</h-button>
-    <h-button iconPosition='right' :icon="'shouwangxianfeng'"
+    <HotsButton >默认</HotsButton>
+    <HotsButton icon="setting">设置</HotsButton>
+    <HotsButton :loading="loading" @click="loading=!loading">点击切换状态</HotsButton>
+    <HotsButton iconPosition='right' :icon="'shouwangxianfeng'"
               :loading="loading2" @click="loading2=!loading2"
-    >右侧图标</h-button>
+    >右侧图标</HotsButton>
+    <div> &nbsp;</div>
+    <div>
+      <HotsButtonGroup>
+        <HotsButton icon="left">prev</HotsButton>
+        <HotsButton>current</HotsButton>
+        <HotsButton icon="right" iconPosition="right">next</HotsButton>
+      </HotsButtonGroup>
+    </div>
   </div>
 </template>
 <script>
   import HotsButton from '../../../src/button/button'
+  import HotsButtonGroup from  '../../../src/button/button-group'
   export default {
     name:'use-button',
     components:{
-      'h-button':HotsButton
+      HotsButton,
+      HotsButtonGroup
     },
     data(){
       return {

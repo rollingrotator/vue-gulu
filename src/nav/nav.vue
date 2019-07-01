@@ -1,6 +1,6 @@
 <!--suppress CssUnknownTarget -->
 <template>
-  <div class="g-nav">
+  <div class="HotsNav">
     <slot></slot>
   </div>
 </template>
@@ -70,7 +70,7 @@
 
 <style scoped lang="scss">
   @import '../../styles/_var.scss';
-  .g-nav {
+  .HotsNav{
     display: flex;
     border-bottom: 1px solid $grey;
     color: $color;

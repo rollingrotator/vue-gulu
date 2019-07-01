@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <HotsLayout style="height: 100vh;">
       <HotsSider>sider</HotsSider>
       <HotsLayout>
@@ -48,5 +48,8 @@
   .footer {
     background: #ccc;
     height: 50px;
+  }
+  .container{
+    border : 1px solid cornflowerblue;
   }
 </style>

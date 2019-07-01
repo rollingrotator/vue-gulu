@@ -54,7 +54,7 @@
     &.error {
       > input { border-color: $red; }
     }
-    .icon-error { fill: $red; }
+    .icon-error { fill: $red; width: $height; height: $height;}
     .errorMessage { color: $red; }
   }
 </style>

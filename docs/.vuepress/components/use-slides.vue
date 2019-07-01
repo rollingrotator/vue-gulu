@@ -36,7 +36,7 @@
   .box {
     width: 100%;
     height: 350px;
-    background: #ddd;
+    background:deepskyblue;
     display: flex;
     justify-content: center;
     align-items: center;

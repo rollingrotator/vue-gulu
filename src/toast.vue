@@ -100,6 +100,7 @@
     100% {opacity: 1;}
   }
   .wrapper {
+    z-index: 21;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);

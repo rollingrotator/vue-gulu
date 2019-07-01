@@ -1,6 +1,6 @@
 <!--suppress ALL -->
 <template>
-  <div class="g-nav-item" :class="{selected}" @click="onClick">
+  <div class="nav-item" :class="{selected}" @click="onClick">
     <slot></slot>
   </div>
 </template>
@@ -35,7 +35,7 @@
 
 <style scoped lang="scss">
   @import '../../styles/_var.scss';
-  .g-nav-item {
+  .nav-item {
     padding: 10px 20px;
     position: relative;
     &.selected {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <tabs :selected.sync="selectedTab" @update:selected="yyy">
       <tabs-head>
         <tabs-item name="woman">
@@ -14,7 +14,7 @@
       </tabs-head>
       <tabs-body>
         <tabs-pane name="woman">
-          美女相关资讯
+          balabalabala
         </tabs-pane>
         <tabs-pane name="finance">
           财经相关资讯
@@ -54,5 +54,7 @@
 </script>
 
 <style scoped>
-
+  .container{
+    border:1px solid deepskyblue;
+  }
 </style>

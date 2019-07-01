@@ -1,9 +1,9 @@
 <!--suppress CssUnknownTarget -->
 <template>
-  <div class="g-sub-nav" :class="{active}" v-click-outside="close">
-    <span class="g-sub-nav-label" @click="onClick">
+  <div class="sub-nav" :class="{active}" v-click-outside="close">
+    <span class="sub-nav-label" @click="onClick">
       <slot name="title"></slot>
-      <span class="g-sub-nav-icon" :class="{open}">
+      <span class="sub-nav-icon" :class="{open}">
         <h-icon name="right"></h-icon>
       </span>
     </span>
@@ -86,23 +86,23 @@
       min-width: 8em;
     }
   }
-  .g-sub-nav .g-sub-nav {
+  .sub-nav .sub-nav {
     &.active {
       &::after {
         display: none;
       }
     }
-    .g-sub-nav-popover {
+    .sub-nav-popover {
       top: 0;
       left: 100%;
       margin-left: 8px;
     }
-    .g-sub-nav-label {
+    .sub-nav-label {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .g-sub-nav-icon {
+    .sub-nav-icon {
       transition: transform 250ms;
       display: inline-flex; margin-left: 1em;
       svg {fill: $light-color;}

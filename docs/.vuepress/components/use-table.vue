@@ -1,15 +1,16 @@
 <template>
-  <div class="element">
-    <div style="margin: 20px;width:500px">
-      <HotsTable :columns="columns" :data-source="dataSource" bordered :selected-items.sync="selected" :order-by.sync="orderBy"
-                 @update:orderBy="x" :loading="loading" :height="400" expend-field="description" checkable>
-        <template slot-scope="xxx">
-          <button @click="edit(xxx.item)">编辑</button>
-          <button @click="view(xxx.item)">查看</button>
-          <button>删除</button>
-        </template>
-      </HotsTable>
-    </div>
+  <div>
+    <div class="element">
+      <div >
+        <HotsTable :columns="columns" :data-source="dataSource" bordered :selected-items.sync="selected" :order-by.sync="orderBy"
+                   @update:orderBy="x" :loading="loading" :height="400" expend-field="description" checkable>
+          <template slot-scope="xxx">
+            <button @click="edit(xxx.item)">编辑</button>
+            <button @click="view(xxx.item)">查看</button>
+          </template>
+        </HotsTable>
+      </div>
+  </div>
   </div>
 </template>
 <script>
@@ -23,8 +24,8 @@
         currentPage: 1,
         selected: [],
         columns: [
-          {text: '姓名', field: 'name', width: 100}, // 1
-          {text: '分数', field: 'score'},
+          {text: '姓名', field: 'name', width:200}, // 1
+          {text: '分数', field: 'score',width:200},
         ],
         orderBy: { // true - 开启排序，但是不确定asc desc
           score: 'desc'

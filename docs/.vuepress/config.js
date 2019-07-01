@@ -26,8 +26,9 @@ module.exports = {
         title: '组件',
         collapsable: false,
         children: [
-            ['/components/button','按钮'],
-            ['/components/slides','轮播'],
+            ['/components/button','button'],
+            ['/components/input','input'],
+            ['/components/tabs','tabs'],
             ['/components/pages','pages'],
             ['/components/table','table'],
             ['/components/sticky','sticky'],
@@ -36,9 +37,10 @@ module.exports = {
             ['/components/layout','layout'],
             ['/components/popover','popover'],
             ['/components/toast','toast'],
-            ['/components/grid','grid'],
-            ['/components/tabs','tabs'],
-            ['/components/nav','nav'],
+            ['/components/slides','slider'],
+
+            // ['/components/grid','grid'],
+            // ['/components/nav','nav'],
 
 
         ]

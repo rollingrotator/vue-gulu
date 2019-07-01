@@ -9,7 +9,7 @@
         <span class="Hots-pager-item current">{{page}}</span>
       </template>
       <template v-else-if="page === '...'">
-        <h-icon class="Hots-pager-separator" name="setting"></h-icon>
+        <h-icon class="Hots-pager-separator" name="ellipsis"></h-icon>
       </template>
       <template v-else>
         <span class="Hots-pager-item other" @click="onClickPage(page)">{{page}}</span>

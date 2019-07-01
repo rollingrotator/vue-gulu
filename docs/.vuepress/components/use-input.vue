@@ -1,6 +1,13 @@
 <template>
   <div>
-    <HotsInput v-model="message"></HotsInput>
+    <div class="margins">
+      <HotsInput value="default" v-model="message"></HotsInput>
+      <HotsInput disabled value="disabled"></HotsInput>
+    </div>
+    <div class="margins">
+      <HotsInput readonly value="readonly"></HotsInput>
+      <HotsInput error="pop error!"></HotsInput>
+    </div>
   </div>
 </template>
 
@@ -23,5 +30,7 @@
 </script>
 
 <style scoped>
-
+.margins{
+  margin: 10px 0;
+}
 </style>

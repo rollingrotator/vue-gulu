@@ -1,3 +1,4 @@
+<!--suppress XmlUnboundNsPrefix -->
 <template>
   <div>
     <Hots-button>xx</Hots-button>
@@ -37,7 +38,6 @@
       >
         <!--:selected="selected"@update:selected="selected = $event"-->
       </HotsCascader>
-      <div>{{selected}}</div>
     </div>
     <div>
       <!--slider-->
@@ -70,8 +70,8 @@
         </template>
       </HotsPopover>
     </div>
-    <div>
-      <!--nav-->
+<!--    <div>
+      &lt;!&ndash;nav&ndash;&gt;
         <HotsNav :selected.sync="selected">
           <HotsNavItem name="home">首页</HotsNavItem>
           <HotsSubNav name="about">
@@ -93,26 +93,15 @@
           <HotsNavItem name="hire">招聘</HotsNavItem>
         </Hotsnav>
         <p>你好，我是中文</p>
-      </div>
+      </div>-->
     <div>
       <!--pages-->
       <HotsPages :totalPage="20"
       :currentPage.sync="currentPage"
       ></HotsPages>
     </div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-    <div>10</div>
 
     <div>
-      {{selected4}}
       <div style="margin: 50px;width:500px">
         <HotsTable :columns="columns" :data-source="dataSource" bordered :selected-items.sync="selected4" :order-by.sync="orderBy"
                    @update:orderBy="x" :loading="loading" :height="400" expend-field="description" checkable>
@@ -201,6 +190,7 @@
     data() {
       return {
         a: false,
+        selected: ['culture'],
         message: 'default',
         source: [
           {

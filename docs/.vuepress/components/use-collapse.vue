@@ -1,12 +1,11 @@
 <template>
   <div  style="padding: 100px;">
+    {{selectedTab}}
     <HotsCollapse :selected.sync="selectedTab">
       <HotsCollapseItem title="标题1" name="1">内容1</HotsCollapseItem>
       <HotsCollapseItem title="标题2" name="2">内容2</HotsCollapseItem>
       <HotsCollapseItem title="标题3" name="3">内容3</HotsCollapseItem>
     </HotsCollapse>
-    {{selectedTab}}
-
   </div>
 </template>
 
