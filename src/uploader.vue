@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <template>
   <div class="hots-uploader">
     <div @click="onClickUpload">
@@ -27,6 +28,7 @@
 
 <script>
   import HIcon from './icon'
+
   export default {
     name: "HotsUploader",
     components: {HIcon: HIcon},
@@ -52,13 +54,13 @@
         default: () => []
       }
     },
-    data () {
+    data() {
       return {
         url: 'about:blank'
       }
     },
     methods: {
-      onClickUpload () {
+      onClickUpload() {
         let input = this.createInput()
         input.addEventListener('change', () => {
           this.updateFile(input.files[0])
@@ -66,7 +68,7 @@
         })
         input.click()
       },
-      onRemoveFile (file) {
+      onRemoveFile(file) {
         let answer = window.confirm('你确定要删除这玩意吗')
         if (answer) {
           let copy = [...this.fileList]
@@ -75,11 +77,11 @@
           this.$emit('update:fileList', copy)
         }
       },
-      beforeUploadFile (rawFile, newName, url) {
+      beforeUploadFile(rawFile, newName, url) {
         let {size, type} = rawFile
         this.$emit('update:fileList', [...this.fileList, {name: newName, type, size, status: 'uploading'}])
       },
-      afterUploadFile (newName, url) {
+      afterUploadFile(newName, url) {
         let file = this.fileList.filter(f => f.name === newName)[0]
         let index = this.fileList.indexOf(file)
         let fileCopy = JSON.parse(JSON.stringify(file))
@@ -89,7 +91,7 @@
         fileListCopy.splice(index, 1, fileCopy)
         this.$emit('update:fileList', fileListCopy)
       },
-      updateFile (rawFile) {
+      updateFile(rawFile) {
         let {name, size, type} = rawFile
         let newName = this.generateName(name)
         this.beforeUploadFile(rawFile, newName) // emit
@@ -103,7 +105,7 @@
           this.uploadError(newName)
         })
       },
-      uploadError (newName) {
+      uploadError(newName) {
         let file = this.fileList.filter(f => f.name === newName)[0]
         let index = this.fileList.indexOf(file)
         let fileCopy = JSON.parse(JSON.stringify(file))
@@ -113,7 +115,7 @@
         fileListCopy.splice(index, 1, fileCopy)
         this.$emit('update:fileList', fileListCopy)
       },
-      generateName (name) {
+      generateName(name) {
         while (this.fileList.filter(f => f.name === name).length > 0) {
           let dotIndex = name.lastIndexOf('.')
           let nameWithoutExtension = name.substring(0, dotIndex)
@@ -122,7 +124,7 @@
         }
         return name
       },
-      doUploadFile (formData, success, fail) {
+      doUploadFile(formData, success, fail) {
         let xhr = new XMLHttpRequest()
         xhr.open(this.method, this.action)
         xhr.onload = () => {
@@ -134,7 +136,7 @@
         }
         xhr.send(formData)
       },
-      createInput () {
+      createInput() {
         let input = document.createElement('input')
         input.type = 'file'
         this.$refs.temp.appendChild(input)
@@ -146,6 +148,7 @@
 
 <style scoped lang="scss">
   @import "../styles/var";
+
   .hots-uploader {
     &-fileList {
       list-style: none;
