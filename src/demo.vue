@@ -1,8 +1,10 @@
 <!--suppress XmlUnboundNsPrefix -->
 <template>
-  <div>
-    <HotsUploader>
-      sdf
+  <div style="margin: 20px;">
+    <div>只能上传 300kb 以内的 png、jpeg 文件</div>
+    <HotsUploader accept="image/*" method="POST" action="https://uploader-server.herokuapp.com/upload" name="file"
+                :parseResponse="parseResponse" :file-list.sync="fileList" v-on:update:fileList="yyy">
+      <HotsButton icon="ow">上传</HotsButton>
     </HotsUploader>
   </div>
 
@@ -48,6 +50,7 @@
     data() {
       return {
         a: false,
+        fileList:[],
         selected: ['culture'],
         message: 'default',
         source: [
@@ -125,6 +128,10 @@
       }
     },
     methods: {
+      parseResponse(response){
+        let url = `https://uploader-server.herokuapp.com/preview/${response}`
+        return url
+      },
       edit (item) {
         alert(`开始编辑${item.id}`)
       },
@@ -138,10 +145,9 @@
           this.loading = false
         }, 3000)
       },
-      yyy(data){
-        console.log('yyy')
-        console.log(data)
-      },
+      yyy (fileList) {
+
+      }
     }
   }
 </script>
