@@ -126,8 +126,7 @@
         let xhr = new XMLHttpRequest()
         xhr.open(this.method, this.action)
         xhr.onload = () => {
-          if (1) {
-            console.log(xhr.response);
+          if (1) {//这里应判断状态码
             success(xhr.response)
           } else {
             fail()
