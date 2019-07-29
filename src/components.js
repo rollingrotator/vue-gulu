@@ -36,6 +36,8 @@ import HotsPopover from './popover'
 import HotsToast from './toast'
 import HotsTable from './table'
 
+import HotsUploader from './uploader'
+
 export {
   HotsButton, HotsButtonGroup,
   HotsCascader, HotsCascaderItems,
@@ -50,5 +52,6 @@ export {
   HotsPages,
   HotsPopover,
   HotsToast,
-  HotsTable
+  HotsTable,
+  HotsUploader
 }

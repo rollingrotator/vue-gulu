@@ -48,7 +48,6 @@
     }
   }
 </style>
-
 <script>
   import HotsIcon from './icon'
   export default {
