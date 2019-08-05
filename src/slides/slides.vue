@@ -27,8 +27,9 @@
 
 <script>
   import HotsIcon from '../icon'
+
   export default {
-    name:'HotsSlides',
+    name: 'HotsSlides',
     components: {HotsIcon},
     props: {
       selected: {
@@ -38,12 +39,12 @@
         type: Boolean,
         default: true
       },
-      autoPlayDelay:{
+      autoPlayDelay: {
         type: Number,
         default: 850
       }
     },
-    data () {
+    data() {
       return {
         childrenLength: 0,
         lastSelectedIndex: undefined,
@@ -51,44 +52,46 @@
         startTouch: undefined,
       }
     },
-    mounted () {
+    mounted() {
       this.updateChildren()
       if (this.autoPlay) {
         this.playAutomatically()
       }
       this.childrenLength = this.items.length
     },
-    updated () {
+    updated() {
       this.updateChildren()
     },
-    beforeDestroy () {
+    beforeDestroy() {
       this.pause()
     },
     computed: {
-      selectedIndex () {
+      selectedIndex() {
         let index = this.names.indexOf(this.selected)
         return index === -1 ? 0 : index
       },
-      names () {
+      names() {
         return this.items.map(vm => vm.name)
       },
-      items () {
+      items() {
         return this.$children.filter(vm => vm.$options.name === 'HotsSlidesItem')
       }
     },
     methods: {
-      onMouseEnter () {
+      onMouseEnter() {
         this.pause()
       },
-      onMouseLeave () {
+      onMouseLeave() {
         this.playAutomatically()
       },
-      onTouchStart (e) {
+      onTouchStart(e) {
         this.pause()
-        if (e.touches.length > 1) {return}
+        if (e.touches.length > 1) {
+          return
+        }
         this.startTouch = e.touches[0]
       },
-      onTouchEnd (e) {
+      onTouchEnd(e) {
         let endTouch = e.changedTouches[0]
         let {clientX: x1, clientY: y1} = this.startTouch
         let {clientX: x2, clientY: y2} = endTouch
@@ -107,14 +110,35 @@
           this.playAutomatically()
         })
       },
-      onClickPrev () {
+      onClickPrev() {
         this.select(this.selectedIndex - 1)
       },
-      onClickNext () {
+      onClickNext() {
         this.select(this.selectedIndex + 1)
       },
-      playAutomatically () {
-        if (this.timerId) { return }
+      throttle(callback, arg) {
+        let pre = Date.now()
+        return function () {
+          if ( Date.now() - pre >= 1000) {
+            callback(arg)
+            pre = Date.now()
+          }
+        }
+      },
+      debounce(callback, arg) {
+        let timer = null
+        return function () {
+          clearTimeout(timer)
+          timer = setTimeout(() => {
+            callback.call(this, arg)
+          }, 2000)
+        }
+      }
+      ,
+      playAutomatically() {
+        if (this.timerId) {
+          return
+        }
         let run = () => {
           let index = this.names.indexOf(this.getSelected())
           let newIndex = index + 1
@@ -122,22 +146,30 @@
           this.timerId = setTimeout(run, this.autoPlayDelay)
         }
         this.timerId = setTimeout(run, this.autoPlayDelay)
-      },
-      pause () {
+      }
+      ,
+      pause() {
         window.clearTimeout(this.timerId)
         this.timerId = undefined
-      },
-      select (newIndex) {
+      }
+      ,
+      select(newIndex) {
         this.lastSelectedIndex = this.selectedIndex
-        if (newIndex === -1) {newIndex = this.names.length - 1}
-        if (newIndex === this.names.length) { newIndex = 0 }
+        if (newIndex === -1) {
+          newIndex = this.names.length - 1
+        }
+        if (newIndex === this.names.length) {
+          newIndex = 0
+        }
         this.$emit('update:selected', this.names[newIndex])
-      },
-      getSelected () {
+      }
+      ,
+      getSelected() {
         let first = this.items[0]
         return this.selected || first.name
-      },
-      updateChildren () {
+      }
+      ,
+      updateChildren() {
         let selected = this.getSelected()
         this.items.forEach((vm) => {
           let reverse = this.selectedIndex > this.lastSelectedIndex ? false : true
@@ -159,7 +191,9 @@
 
 <style lang="scss" scoped>
   .g-slides {
-    &-window {overflow: hidden;}
+    &-window {
+      overflow: hidden;
+    }
     &-wrapper {
       position: relative;
     }
