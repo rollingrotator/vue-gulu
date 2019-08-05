@@ -141,13 +141,11 @@
         let selected = this.getSelected()
         this.items.forEach((vm) => {
           let reverse = this.selectedIndex > this.lastSelectedIndex ? false : true
-          if (this.timerId) {
-            if (this.lastSelectedIndex === this.items.length - 1 && this.selectedIndex === 0) {
-              reverse = false
-            }
-            if (this.lastSelectedIndex === 0 && this.selectedIndex === this.items.length - 1) {
-              reverse = true
-            }
+          if (this.lastSelectedIndex === this.items.length - 1 && this.selectedIndex === 0) {
+            reverse = false
+          }
+          if (this.lastSelectedIndex === 0 && this.selectedIndex === this.items.length - 1) {
+            reverse = true
           }
           vm.reverse = reverse
           this.$nextTick(() => {
