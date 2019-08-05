@@ -33,6 +33,7 @@ module.exports = {
             ['/components/table','table'],
             ['/components/sticky','sticky'],
             ['/components/cascader','cascader'],
+            ['/components/uploader','uploader'],
             ['/components/collapse','collapse'],
             ['/components/layout','layout'],
             ['/components/popover','popover'],
