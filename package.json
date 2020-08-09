@@ -10,13 +10,13 @@
     "test:unit:old": "vue-cli-service test:unit",
     "docs:build": "vuepress build docs",
     "deploy": "gh-pages -d dist",
-
     "serve": "vue-cli-service serve",
     "docs:dev": "vuepress dev docs",
     "deploy:build": "yarn run docs:build && gh-pages -d dist"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "node-sass": "^4.14.1",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",
@@ -35,7 +35,6 @@
     "karma-spec-reporter": "^0.0.32",
     "karma-webpack": "^3.0.0",
     "mocha": "^5.2.0",
-    "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "sinon": "^6.1.5",
     "sinon-chai": "^3.2.0",
